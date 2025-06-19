@@ -2,25 +2,28 @@
   display: inline-block;
   cursor: pointer;
   border: 0;
-  border-radius: 3em !important;
+
+  /* border-radius: 3em !important; */
   font-weight: 700;
-  line-height: 1;
+  padding-inline-start: 1rem;
+
+  /* line-height: 1; */
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.storybook-button:focus {
+/* .storybook-button:focus {
   outline: none;
-}
+} */
 
 .storybook-button--primary {
-  background-color: #555ab9;
-  color: white;
+  /* background-color: #555ab9;
+  color: white; */
 }
 
 .storybook-button--secondary {
-  box-shadow: rgb(0 0 0 / 15%) 0 0 0 1px inset;
+  /* box-shadow: rgb(0 0 0 / 15%) 0 0 0 1px inset;
   background-color: transparent;
-  color: #333;
+  color: #333; */
 }
 
 .storybook-button--small {

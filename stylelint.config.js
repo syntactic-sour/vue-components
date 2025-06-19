@@ -35,7 +35,12 @@ export default {
      * either VSCode or the extension are causing browserlist config files to be cached
      * and are not watching for changes in the file.
      */
-    'plugin/no-unsupported-browser-features': [true],
+    'plugin/no-unsupported-browser-features': [
+      true,
+      {
+        ignore: ['css-logical-props'],
+      },
+    ],
     /**
      * The data is sourced from web-features (https://github.com/web-platform-dx/web-features#readme)
      */
