@@ -1,0 +1,9 @@
+- [ ] Browserlist update according to JS features?
+- [ ] Eslint & browserlist
+- [ ] Eslint for security
+- [ ] Vite config stylelint and devtools based on env
+- [ ] postcssBrowserReporter based on env
+- [ ] other postcss plugins
+- [ ] git hooks for linting
+- [ ] configure stylelint on build - warning, on precommit - throw
+- [ ] plugins and other settings for vscode workplace
