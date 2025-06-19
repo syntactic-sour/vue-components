@@ -1,0 +1,4 @@
+yarn lint
+yarn lint-styles
+yarn type-check
+yarn test:unit

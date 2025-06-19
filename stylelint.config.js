@@ -1,6 +1,7 @@
 /** @type {import('stylelint').Config} */
 export default {
-  extends: ['stylelint-config-standard'],
+  extends: ['stylelint-config-standard', 'stylelint-config-recommended-vue'],
+  customSyntax: 'postcss-html',
   plugins: [
     'stylelint-rem-over-px',
     'stylelint-plugin-defensive-css',
@@ -38,7 +39,7 @@ export default {
     'plugin/no-unsupported-browser-features': [
       true,
       {
-        ignore: ['css-logical-props'],
+        ignore: ['css-logical-props', 'css-variables'],
       },
     ],
     /**
