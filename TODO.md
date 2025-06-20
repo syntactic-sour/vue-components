@@ -13,6 +13,7 @@
 - [ ] prepended css (simple vars, mixins)
 - [ ] document used postcss plugins
 - [ ] document stylelint rules, tune rules
+- [ ] lint and test only changed files (get changed files from git)
 
 ### Postcss analytics
 
