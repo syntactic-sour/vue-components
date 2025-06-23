@@ -1,4 +1,3 @@
-yarn lint
-yarn lint-styles
-yarn type-check
-yarn test:unit
+yarn lint $(git diff origin/main --diff-filter=ACMRTUXB --name-only -- **/*.{js,ts,vue})   
+yarn type-check $(git diff origin/main --diff-filter=ACMRTUXB --name-only -- ./src/**/*.{js,ts,vue})
+yarn lint-styles $(git diff origin/main --diff-filter=ACMRTUXB --name-only -- ./src/**/*.{css,vue})

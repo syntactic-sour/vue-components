@@ -5,14 +5,11 @@
 - [ ] Vite config stylelint and devtools based on env
 - [ ] Eslint & browserlist
 - [ ] Eslint for security
-- [ ] git hooks for linting
 - [ ] plugins and other settings for vscode workplace
 - [ ] snyk
 - [ ] put it all in docker
 - [ ] global css (reset, global layout, global vars)
 - [ ] prepended css (simple vars, mixins)
-- [ ] document used postcss plugins
-- [ ] document stylelint rules, tune rules
 - [ ] lint and test only changed files (get changed files from git)
 
 ### Postcss analytics
