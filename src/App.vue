@@ -17,4 +17,6 @@ import TheWelcome from './components/TheWelcome.vue'
   </main>
 </template>
 
-<style scoped></style>
+<style scoped>
+/* Placeholder */
+</style>
