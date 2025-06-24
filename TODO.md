@@ -1,16 +1,11 @@
 - [ ] Browserlist update according to JS features?
-- [ ] postcssBrowserReporter based on env
 - [ ] other postcss plugins
-- [ ] configure stylelint on build - warning, on precommit - throw
-- [ ] Vite config stylelint and devtools based on env
 - [ ] Eslint & browserlist
 - [ ] Eslint for security
 - [ ] plugins and other settings for vscode workplace
-- [ ] snyk
 - [ ] put it all in docker
 - [ ] global css (reset, global layout, global vars)
 - [ ] prepended css (simple vars, mixins)
-- [ ] lint and test only changed files (get changed files from git)
 
 ### Postcss analytics
 

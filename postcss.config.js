@@ -27,53 +27,62 @@ import transparentSafariCustomProps from 'postcss-redundant-color-vars'
 import transparentGradientSafari from 'postcss-gradient-transparency-fix'
 import rtl from 'postcss-rtl'
 import logicalPropsFallback from 'postcss-logical-properties'
+import warnCleaner from 'postcss-warn-cleaner'
 
 export default () => {
+  const plugins = [
+    /** Logic */
+    atVars(),
+    simpleVars(),
+    nested(),
+    mixins(),
+    forCycle(),
+    /** Optimisation */
+    calcReduce(),
+    /** Animations */
+    springEasings(),
+    /** RTL */
+    rtl({
+      /**
+       * See all affected props:
+       * https://github.com/vkalinichev/postcss-rtl/blob/master/src/affected-props.js
+       */
+      blacklist: [
+        'margin',
+        'margin-top',
+        'margin-bottom',
+        'padding',
+        'padding-top',
+        'padding-bottom',
+      ],
+    }),
+    logicalPropsFallback(),
+    /** Fixing Safari bugs */
+    transparentSafariCustomProps(),
+    transparentGradientSafari(),
+    /** Graceful degradation */
+    customPropsFallback({
+      preserve: true,
+    }),
+    autoprefixer(),
+    postcssPresetEnv(),
+    /** Code quality */
+    // TODO: fork maybe, it doesn't warn on shorthand properties like padding: 1rem 2rem 3rem 4rem
+    startToEnd({
+      direction: 'RTL',
+      warnings: process.env.VITE_APP_DEVTOOLS === 'true',
+    }),
+    warnCleaner({
+      ignoreFiles: '**/node_modules/vite-plugin-vue-devtools/**/*',
+    }),
+    cliReporter(),
+  ]
+
+  if (process.env.VITE_APP_DEVTOOLS === 'true') {
+    plugins.unshift(postcssBrowserReporter())
+  }
+
   return {
-    plugins: [
-      // TODO: turn off in prod
-      postcssBrowserReporter(),
-      /** Logic */
-      atVars(),
-      simpleVars(),
-      nested(),
-      mixins(),
-      forCycle(),
-      /** Optimisation */
-      calcReduce(),
-      /** Animations */
-      springEasings(),
-      /** RTL */
-      rtl({
-        /**
-         * See all affected props:
-         * https://github.com/vkalinichev/postcss-rtl/blob/master/src/affected-props.js
-         */
-        blacklist: [
-          'margin',
-          'margin-top',
-          'margin-bottom',
-          'padding',
-          'padding-top',
-          'padding-bottom',
-        ],
-      }),
-      logicalPropsFallback(),
-      /** Fixing Safari bugs */
-      /** Graceful degradation */
-      transparentSafariCustomProps(),
-      transparentGradientSafari(),
-      customPropsFallback(),
-      autoprefixer(),
-      postcssPresetEnv(),
-      /** Code quality */
-      // TODO: turn off warnings in prod
-      // TODO: fork maybe, it doesn't warn on shorthand properties like padding: 1rem 2rem 3rem 4rem
-      startToEnd({
-        direction: 'RTL',
-        warnings: true,
-      }),
-      cliReporter(),
-    ],
+    plugins,
   }
 }

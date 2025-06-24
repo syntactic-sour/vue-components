@@ -12,12 +12,6 @@ export default {
     'stylelint-high-performance-animation',
     '@double-great/stylelint-a11y',
   ],
-  // overrides: [
-  //   {
-  //     files: ['*.vue', '**/*.vue'],
-  //     extends: [],
-  //   },
-  // ],
   rules: {
     'declaration-no-important': true,
     'block-no-empty': null,
@@ -70,4 +64,5 @@ export default {
     'a11y/no-text-align-justify': true,
     'a11y/selector-pseudo-class-focus': true,
   },
+  ignoreFiles: ['./node_modules/**/*'],
 }
