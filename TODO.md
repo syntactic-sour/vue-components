@@ -1,11 +1,13 @@
 - [ ] Browserlist update according to JS features?
 - [ ] other postcss plugins
-- [ ] Eslint & browserlist
-- [ ] Eslint for security
 - [ ] plugins and other settings for vscode workplace
 - [ ] put it all in docker
 - [ ] global css (reset, global layout, global vars)
 - [ ] prepended css (simple vars, mixins)
+
+### i18n
+
+https://eslint-plugin-vue-i18n.intlify.dev/
 
 ### Postcss analytics
 

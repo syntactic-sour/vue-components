@@ -32,6 +32,7 @@
     "@storybook/addon-vitest": "^9.0.12",
     "@storybook/vue3-vite": "^9.0.12",
     "@tsconfig/node22": "^22.0.1",
+    "@types/eslint-plugin-security": "^3.0.0",
     "@types/jsdom": "^21.1.7",
     "@types/node": "^22.14.0",
     "@vitejs/plugin-vue": "^5.2.3",
@@ -45,8 +46,11 @@
     "autoprefixer": "^10.4.21",
     "browserslist-to-esbuild": "^2.1.1",
     "eslint": "^9.22.0",
+    "eslint-plugin-escompat": "^3.11.4",
+    "eslint-plugin-security": "^3.0.1",
     "eslint-plugin-storybook": "^9.0.12",
     "eslint-plugin-vue": "~10.0.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "husky": "^9.1.7",
     "jiti": "^2.4.2",
     "jsdom": "^26.0.0",
@@ -89,6 +93,7 @@
     "vite-plugin-stylelint": "^6.0.0",
     "vite-plugin-vue-devtools": "^7.7.2",
     "vitest": "^3.1.1",
+    "vue-eslint-parser": "^10.1.4",
     "vue-tsc": "^2.2.8"
   },
   "resolutions": {
