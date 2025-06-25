@@ -28,10 +28,17 @@ import transparentGradientSafari from 'postcss-gradient-transparency-fix'
 import rtl from 'postcss-rtl'
 import logicalPropsFallback from 'postcss-logical-properties'
 import warnCleaner from 'postcss-warn-cleaner'
+import globalData from 'postcss-prepend-imports'
+import imports from 'postcss-import'
 
 export default () => {
   const plugins = [
     /** Logic */
+    globalData({
+      path: 'src/assets/global',
+      files: ['index.css'],
+    }),
+    imports(),
     atVars(),
     simpleVars(),
     nested(),

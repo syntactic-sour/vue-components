@@ -2,8 +2,7 @@
 - [ ] other postcss plugins
 - [ ] plugins and other settings for vscode workplace
 - [ ] put it all in docker
-- [ ] global css (reset, global layout, global vars)
-- [ ] prepended css (simple vars, mixins)
+- [ ] global css (reset, global layout, global custom props)
 
 ### i18n
 
