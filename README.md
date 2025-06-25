@@ -22,16 +22,27 @@ Draft component library, a11y-first. Written with Vue 3
 
 ### Global css
 
-Imported to storybook and App.vue
+Imported to Storybook and App.vue
+Stored in `src/css/global`. Note that only `index.css` file gets imported.
+It should only contain imports.
+
+#### Storybook global styles overwrites
+
+If some styles from `src/css/global/index.css` are not applied correctly in Storybook due to css specificity, they can be overwritten in `src/css/storybook-reset.css`. It is also imported in Storybook, but **does not affect App.vue**.
+
+Example: `paddings` on `body`.
 
 ### Prepended css
 
 Logic that is transpiled to css, but needed for postcss plugins.
-
-<!-- TODO: add example and a link to package doc -->
+Injected via `postcss-prepend-imports` and `postcss-import` plugins.
 
 - Simple variables
 - Mixins
+
+Stored in `src/css/logic`. To add new file, update `postcss.config.js`.
+
+Note, this logic is automatically included both in App.vue and in Storybook.
 
 ### Postcss plugins
 

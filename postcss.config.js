@@ -35,8 +35,8 @@ export default () => {
   const plugins = [
     /** Logic */
     globalData({
-      path: 'src/assets/global',
-      files: ['index.css'],
+      path: 'src/css/logic',
+      files: ['variables.css'],
     }),
     imports(),
     atVars(),

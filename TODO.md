@@ -2,7 +2,7 @@
 - [ ] other postcss plugins
 - [ ] plugins and other settings for vscode workplace
 - [ ] put it all in docker
-- [ ] global css (reset, global layout, global custom props)
+- [ ] Research best way to do theming
 
 ### i18n
 
