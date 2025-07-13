@@ -1,7 +1,6 @@
-/// <reference types="vitest/config" />
-
 import { fileURLToPath, URL } from 'node:url'
 import { defineConfig, loadEnv, Plugin, UserConfig } from 'vite'
+import { UserConfig as UserTestConfig } from 'vitest/config'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import stylelint from 'vite-plugin-stylelint'
@@ -20,7 +19,8 @@ export const config: UserConfig = {
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src/components', import.meta.url)),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@c': fileURLToPath(new URL('./src/components', import.meta.url)),
     },
   },
 }
@@ -30,11 +30,11 @@ export default defineConfig(({ mode }): UserConfig => {
   const env = loadEnv(mode, process.cwd())
 
   if (env.VITE_APP_DEVTOOLS === 'true') {
-    config.plugins?.push(vueDevTools() as Plugin, stylelint())
+    config.plugins?.push(vueDevTools() as Plugin, stylelint() as Plugin)
   }
 
   if (env.VITE_APP_STRYBOOK_TESTS === 'true') {
-    config?.test?.projects?.push({
+    ;(config as UserTestConfig).test?.projects?.push({
       extends: true as const,
       plugins: [
         // The plugin will run tests for the stories defined in your Storybook config

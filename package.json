@@ -4,11 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
-    "preview": "vite preview",
     "test:unit": "vitest",
-    "build-only": "vite build",
     "type-check": "vue-tsc --build",
     "lint-all-styles": "stylelint \"src/**/*.{css,vue}\" --validate",
     "lint-styles": "stylelint --validate",
@@ -17,9 +13,9 @@
     "storybook": "storybook dev -p 6006",
     "storybook-cc": "rm -rf node_modules/.cache/storybook",
     "build-storybook": "storybook build",
-    "prepare": "husky"
+    "prepare": "husky && install-peers"
   },
-  "dependencies": {
+  "peerDependencies": {
     "vue": "^3.5.13"
   },
   "devDependencies": {
@@ -52,6 +48,7 @@
     "eslint-plugin-vue": "~10.0.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
     "husky": "^9.1.7",
+    "install-peers-cli": "^2.2.0",
     "jiti": "^2.4.2",
     "jsdom": "^26.0.0",
     "npm-run-all2": "^7.0.2",
