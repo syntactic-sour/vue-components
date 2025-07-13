@@ -1,0 +1,19 @@
+:root {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}

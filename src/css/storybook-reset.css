@@ -1,3 +1,9 @@
 body {
-  padding: 10rem !important;
+  padding: 0 !important;
+}
+
+#storybook-root {
+  height: 100%;
+  width: 100%;
+  overflow: visible;
 }
