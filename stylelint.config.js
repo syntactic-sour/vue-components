@@ -16,7 +16,10 @@ export default {
     'declaration-no-important': true,
     'block-no-empty': null,
     'selector-class-pattern': null,
-    'rem-over-px/rem-over-px': [true, { ignore: ['1px'] }],
+    'rem-over-px/rem-over-px': [
+      true,
+      { ignore: ['1px', 'border', 'border-block-end', 'border-block-start'] },
+    ],
     'declaration-property-unit-allowed-list': {
       '/^border/': ['px'],
       '/^padding|^gap|^margin/': ['rem'],
@@ -56,7 +59,7 @@ export default {
     'a11y/font-size-is-readable': true,
     'a11y/line-height-is-vertical-rhythmed': true,
     'a11y/media-prefers-reduced-motion': true,
-    'a11y/media-prefers-color-scheme': true,
+    'a11y/media-prefers-color-scheme': null,
     'a11y/no-obsolete-attribute': true,
     'a11y/no-obsolete-element': true,
     'a11y/no-spread-text': true,

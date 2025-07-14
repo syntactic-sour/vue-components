@@ -55,6 +55,17 @@ export default () => {
        * https://github.com/vkalinichev/postcss-rtl/blob/master/src/affected-props.js
        */
       blacklist: [
+        'background',
+        'background-attachment',
+        'background-color',
+        'background-clip',
+        '-webkit-background-clip',
+        'background-image',
+        'background-position',
+        'background-position-x',
+        'background-position-y',
+        'background-repeat',
+        'background-size',
         'margin',
         'margin-top',
         'margin-bottom',

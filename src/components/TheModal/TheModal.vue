@@ -96,15 +96,13 @@ function focusFirst() {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10000;
 }
 
 .modal {
-  inline-size: 25rem;
-  block-size: 25rem;
-  background: white;
   display: flex;
   flex-direction: column;
-  flex: 1 1 auto;
+  flex: 0 1 auto;
   margin: 0 auto;
   max-inline-size: 100%;
   max-block-size: 100%;
