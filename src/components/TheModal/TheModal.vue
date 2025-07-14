@@ -79,7 +79,7 @@ function focusFirst() {
         <h2 :id="headingId">{{ heading }}</h2>
         <!-- TODO: use icon -->
         <button class="close-btn" type="button" @click="closeModal">Close</button>
-        <slot></slot>
+        <div class="content"><slot></slot></div>
         <div @focus="focusFirst" tabindex="0"></div>
       </dialog>
     </div>
@@ -111,6 +111,10 @@ function focusFirst() {
   min-inline-size: 6.25rem;
   min-block-size: 6.25rem;
   position: relative;
+  overflow: auto;
+}
+
+.content {
   overflow: auto;
 }
 

@@ -31,3 +31,14 @@ export const Primary: StoryObj = {
     label: 'Modal',
   },
 }
+
+export const Overflow: StoryObj = {
+  render: () => ({
+    components: { TheModal },
+    template:
+      '<main><div style="width: 100%; height: 1000px; background: black;"></div><TheModal heading="My modal"><div style="width: 1000px; height: 1000px; background: red;"></div>Content <button>Yo!</button></TheModal></main>',
+  }),
+  args: {
+    label: 'Modal',
+  },
+}
