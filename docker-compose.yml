@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    ports:
+      - '6006:6006'
+    volumes:
+      - './.husky:/app/.husky'
+      - './.storybook:/app/.storybook'
+      - './src:/app/src'
+      - './public:/app/public'
+      - './.env.local:/app/.env.local'
+      - './eslint.config.ts:/app/eslint.config.ts'
+      - './postcss.config:/app/postcss.config'
+      - './stylelint.config.js:/app/stylelint.config.js'
+      - './tsconfig.json:/app/tsconfig.json'
+      - './tsconfig.app.json:/app/tsconfig.app.json'
+      - './tsconfig.node.json:/app/tsconfig.node.json'
+      - './tsconfig.vitest.json:/app/tsconfig.vitest.json'
+      - './vite.config.ts:/app/vite.config.ts'
+      - './vitest.config.ts:/app/vitest.config.ts'
+      - './vitest.shims.d.ts:/app/vitest.shims.d.ts'

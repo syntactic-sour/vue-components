@@ -10,7 +10,7 @@
     "lint-styles": "stylelint --validate",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "storybook": "storybook dev -p 6006",
+    "storybook": "storybook dev --port 6006 --no-open",
     "storybook-cc": "rm -rf node_modules/.cache/storybook",
     "build-storybook": "storybook build",
     "prepare": "husky && install-peers"

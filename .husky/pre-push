@@ -1,2 +1,2 @@
-yarn test:unit
-yarn lint-all-styles
+docker exec vue-components-web-1 yarn test:unit --browser.headless
+docker exec vue-components-web-1 yarn lint-all-styles

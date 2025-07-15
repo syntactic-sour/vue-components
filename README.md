@@ -2,6 +2,15 @@
 
 Draft component library, a11y-first. Written with Vue 3
 
+## Local development with Docker
+
+Create local environment variables (`.env.local`) based on `.env.local.sample`.
+
+```
+docker compose build
+docker compose up
+```
+
 ## Supported platforms
 
 <!-- TODO: browserlist, node version -->
